@@ -1,0 +1,679 @@
+<html>
+    <head>
+        <style type='text/css'>
+            body, html {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+	           color: black;
+	           display: table;
+	           font-family: Arial, Helvetica, sans-serif;
+	           font-size: 13px;
+	           text-align: center;
+            }
+
+            section:not(:last-child){
+                page-break-after: always;
+                position: relative;
+            }
+
+            .container {
+                /* start impresion */
+	            /*border: 2px solid #fff;*/
+                /* end impresion */
+
+                /* start digital  */
+                /*border: 2px solid #000;*/
+                /* end digital */
+
+	            display: table-cell;	
+
+                /* start digital */                
+                /*background-size: cover;
+            	background-image: url(form_solicitud.jpg);              
+            	background-repeat: no-repeat; */
+                /* end digital */
+	
+	            padding-top:0px;
+                position: absolute;
+                /*width: 712pt;
+                height: 930pt;*/
+                /*width: 830pt;*/
+                width: 712pt;
+                height: 1060pt;
+            }
+
+            .content {
+                /*margin-top: 230px;*/
+            }
+            .row {
+                width: 830pt;
+                clear: both;
+                /*padding-top: 3pt;
+                margin-bottom: 3pt;*/
+                min-height: 10pt;
+            }
+            .columna1 {
+                margin-left: 127pt;
+                width: 113pt;
+                font-size: 11px;
+                float: left;
+            }
+            .columna2 {
+                width: 462pt;
+                font-size: 11px;
+                float: left;
+            }
+            .col1, .col2, .col3 {
+                float: left;
+            }
+            .col1 {
+                margin-left: 127pt;
+                width: 113pt;
+                font-size: 11px;
+            }
+            .col2 {
+                width: 216pt;
+                font-size: 11px;
+            }
+            .col3 {
+                width: 245pt;
+                font-size: 11px;
+            }
+            .cert {
+                color: #000;
+                font-weight: bold;
+                letter-spacing: -0.3px;
+                margin-top: 157pt;
+                font-family: "Arial Black";
+                font-size: 32px;
+                margin-left: 0pt;
+            }
+			.logo {
+                float:left;
+            }
+			.cabecera {
+				text-align:center;
+				font-family:"Times New Roman", Times, serif;
+				font-size:16px;                
+            }
+			.logo2 {
+                float:right;
+            }                                 
+			.cod1 {
+				float: left;
+				padding: 7pt 24pt 9pt 24pt;
+				border: solid 2px #ccc;
+				border-top: 0px;
+				border-right: 0px;
+			}
+			.cod2{
+				float: left;
+				padding: 7pt 15pt 9pt 15pt;
+				border: solid 2px #ccc;
+				border-top: 0px;
+				
+			}
+			
+			.firma {
+                color: #000;
+                font-size: 19px;
+                margin: 8pt 0pt 0pt 196pt;                
+                width: 561pt;
+                text-align: right;
+                letter-spacing: 0.29px;
+            }
+            .sinmembrete {
+                background: none;
+            }
+            #bottom {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+            
+            /* temporal */
+
+         /*div {border: 2px dotted red;}
+            .row {border: 0px solid green;}*/
+
+            /*Incluido Ruy*/
+
+            .col_1de3 {width: 33pt; float: left;}
+            .colTitulo {width: 300pt; float: left; text-align: center; font-weight: bold;}
+            .colCodigo {width: 134pt; float: left; text-align: right; font-size: 11px; font-weight: bold;}
+            .colNro {width: 400pt; text-align: right;}
+            .innerrow {padding-top: 2pt;}
+            input {border-bottom: 1px solid black ;}
+            .lineaInf {border: 0 ; border-bottom: 1px solid black;}
+
+            .ancho15 {width: 15pt; height: 11pt;}
+            .ancho50 {width: 50pt;}
+            .ancho90 {width: 90pt;}
+            .ancho100 {width: 100pt;}
+            .ancho150  {width: 150pt;}
+            .ancho300  {width: 300pt;}
+            .anchoTotal  {width: 830pt;}
+            .colSubtitulo {background-color: #cfcfcf; font-weight: bold; padding: 2pt 0pt; font-size: 11px; text-align: left;}
+            .alinearizq {text-align: left;}
+            .col2y3 { width: 442pt; float: left; font-size: 11px;}  
+
+            .col_1de3 {margin-left: 127pt; width: 180pt; float: left; text-align: left; font-size: 11px;}
+            .col_2de3 {width: 180pt; float: left; text-align: left; font-size: 11px;}
+            .col_3de3 {width: 180pt; float: left; text-align: left; font-size: 11px;}   
+
+            .col_unica {margin-left: 127pt; float: left; text-align: left; font-size: 11px;}
+
+            .col_1de2 {margin-left: 127pt; width: 287pt; float: left; text-align: left; font-size: 11px;}
+            .col_2de2 {float: left; text-align: left; font-size: 11px;}
+
+            .flotader {float: right;}
+            .flotaizq {float: left}
+            .col_chk {width: 210pt; margin-bottom: 3px; font-size: 11px; padding-bottom: 8.3px;}
+
+
+            .firma01 {border-top: 1px solid black; text-align: center; font-size: 11px;}
+
+           
+        </style>
+    </head>
+    <body>
+        <section>
+            <div class="container">
+                <div class="content">
+                    <div class="row">
+                        <div class="columna1"><img src="logo_senasag.jpg" width="60"></div>
+                        <div class="columna2">
+                            <div class="innerrow" style="padding-bottom: 25pt;">
+                                <div class="colTitulo">AREA DE TECNOLOGIA Y SISTEMAS-SENASAG<br> FORMULARIO DE SOLICITUD DE SERVICIOS Y CUENTA DE USUARIO</div>
+                                <div class="colCodigo">SNG-ANTS-FORM 02</div>
+                            </div>
+                            <div class="innerrow">
+                                <div class="colNro">Nro: <input class="lineaInf ancho50" type="text" id="numero" name="numero" disabled></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col1 colSubtitulo">DATOS PERSONALES</div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col1 alinearizq"> C.I.:<input  readonly class="lineaInf ancho90" type="text" id="numero" name="numero" disabled></div>
+                        <div class="col2y3 alinearizq"> Correo Personal <input readonly class="lineaInf" style="width:375pt;" type="text" id="email" name="email" disabled></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col_1de3 alinearizq"> NOMBRES:<input readonly class="lineaInf" style="width:120pt;" type="text" id="numero" name="numero" disabled></div>
+                        <div class="col_2de3 alinearizq"> AP. PATERNO <input readonly class="lineaInf" style="width:120pt;" type="text" id="email" name="email" disabled></div>
+                        <div class="col_3de3 alinearizq"> AP. MATERNO <input readonly class="lineaInf" style="width:120pt;" type="text" id="email" name="email" disabled></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col1 colSubtitulo">DATOS INSTITUCIONALES</div>
+                    </div>
+
+                    
+                    <div class="row">
+                        <div class="col_unica"> CARGO:<input readonly class="lineaInf" style="width:530pt;" type="text" id="numero" name="numero" disabled></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col_1de2 alinearizq"> UNIDAD:<input readonly class="lineaInf"  style="width:250pt;" type="text" id="numero" name="numero" disabled></div>
+                        <div class="col_2de2 alinearizq"> ÁREA <input readonly class="lineaInf" style="width:250pt;" type="text" id="email" name="email" disabled></div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col_unica"> PROFESIÓN/OCUPACIÓN:<input readonly class="lineaInf" style="width:462pt;" type="text" id="numero" name="numero" disabled></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col1 colSubtitulo">SERVICIOS</div>
+                    </div>
+
+                    <div class="row" style="padding: 4pt 0;">
+                        <div class="col_1de3 alinearizq" style="padding-left: 25pt;"> INTERNET 
+                            <input readonly style="width:40pt;" type="checkbox" id="" name="" disabled></div>
+                        <div class="col_2de3 alinearizq">SKYPE 
+                            <input readonly style="width:40pt;" type="checkbox" id="" name="" disabled></div>
+                        <div class="col_3de3 alinearizq"> CORREO INSTITUCIONAL 
+                            <input readonly style="width:40pt;" type="checkbox" id="" name="" disabled></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col1 colSubtitulo">APLICACIONES</div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col1 alinearizq">PAITITI (PPadron Web)</div>
+                        <div class="col2y3 alinearizq">
+                            <div class="col_chk flotaizq">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+
+                            <div class="col_chk flotader">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+
+                            <div class="col_chk flotaizq">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+
+                            <div class="col_chk flotader">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+
+                            <div class="col_chk flotaizq">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+
+                            <div class="col_chk flotader">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+                            
+                            <div class="col_chk flotaizq">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+
+                            <div class="col_chk flotader">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+                            
+                            <div class="col_chk flotaizq">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+
+                            <div class="col_chk flotader">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+                            
+                            <div class="col_chk flotaizq">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+
+                            <div class="col_chk flotader">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+                            
+                            <div class="col_chk flotaizq">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+
+                            <div class="col_chk flotader">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+
+                        </div>
+                    </div>                   
+
+                    <div class="row">
+                        <div class="col1 alinearizq">Sistema Pservicios Web</div>
+                        <div class="col2y3 alinearizq">
+                            <div class="col_chk flotaizq">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+
+                            <div class="col_chk flotader">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+
+                            <div class="col_chk flotaizq">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+
+                            <div class="col_chk flotader">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+
+                            <div class="col_chk flotaizq">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+
+                            <div class="col_chk flotader">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+                            
+                            <div class="col_chk flotaizq">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+
+                            <div class="col_chk flotader">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+                            
+                            <div class="col_chk flotaizq">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+
+                            <div class="col_chk flotader">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+                            
+                            <div class="col_chk flotaizq">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+
+                            <div class="col_chk flotader">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+                            
+                            <div class="col_chk flotaizq">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+
+                            <div class="col_chk flotader">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col1 alinearizq">Sistema Pinspecci&oacute;n</div>
+                        <div class="col2y3 alinearizq">
+                            <div class="col_chk flotaizq">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+
+                            <div class="col_chk flotader">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+
+                            <div class="col_chk flotaizq">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+
+                            <div class="col_chk flotader">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+
+                            <div class="col_chk flotaizq">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+
+                            <div class="col_chk flotader">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+                            
+                            <div class="col_chk flotaizq">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+
+                            <div class="col_chk flotader">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+                            
+                            <div class="col_chk flotaizq">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+
+                            <div class="col_chk flotader">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+
+                        
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col1 alinearizq">Sistema Ppadron Web</div>
+                        <div class="col2y3 alinearizq">
+                            <div class="col_chk flotaizq">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+
+                            <div class="col_chk flotader">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+
+                            <div class="col_chk flotaizq">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+
+                            <div class="col_chk flotader">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+
+                            <div class="col_chk flotaizq">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+
+                            <div class="col_chk flotader">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+                            
+                            <div class="col_chk flotaizq">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+
+                            <div class="col_chk flotader">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+                            
+                            <div class="col_chk flotaizq">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+
+                            <div class="col_chk flotader">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col1 alinearizq">Sistema SRAR</div>
+                        <div class="col2y3 alinearizq">
+                            <div class="col_chk flotaizq">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+
+                            <div class="col_chk flotader">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+
+                            <div class="col_chk flotaizq">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+
+                            <div class="col_chk flotader">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+
+                            <div class="col_chk flotaizq">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+
+                            <div class="col_chk flotader">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+                     
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col1 alinearizq">Sistema de Liquidaci&oacute;n</div>
+                        <div class="col2y3 alinearizq">
+                            <div class="col_chk flotaizq">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+
+                            <div class="col_chk flotader">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+
+                            <div class="col_chk flotaizq">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+
+                            <div class="col_chk flotader">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+
+                            <div class="col_chk flotaizq">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+
+                            <div class="col_chk flotader">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+                     
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col1 alinearizq">Sistema de Reportes</div>
+                        <div class="col2y3 alinearizq">
+                            <div class="col_chk flotaizq">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+
+                            <div class="col_chk flotader">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+
+                            <div class="col_chk flotaizq">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>
+
+                            <div class="col_chk flotader">
+                                <span>Registro Nal. Sanitario de Inocuidad Alimentaria</span>
+                                <span class="flotader"><input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                            </div>                   
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col1 alinearizq">Otras Aplicaciones U BD</div>
+                        <div class="col2y3 alinearizq"> <input class="lineaInf" style="width:450pt;" type="text" id="email" name="email" disabled></div>
+                    </div>
+
+                  <div class="row" style="padding-top: 50pt; padding-left: 120pt;">
+                        <div style="width: 130pt; float: left;" class="col1 firma01" >Vo Bo JEFE DE UNIDAD/ÁREA</div>
+                        <div style="width: 183pt; float: left;">............/................................../...........</div>
+                        <div style="width: 130pt; float: left;" class="firma01" >FUNCIONARIO</div>
+                  </div>
+
+                  <div class="row" style="padding-top: 20pt;">
+                    <div class="col_unica alinearizq" style="border-top: 2px dotted  #000; width: 564pt;">
+                        <strong>SECCIÓN PARA EL ÁREA NACIONAL DE TECNOLOGÍA Y SISTEMAS</strong> </div>
+                </div>
+
+
+                <div class="row" style="padding-top: 5pt;">
+                    <div class="col1 colSubtitulo">SOLICITUD</div>
+                    <div class="col2y3 alinearizq">
+                        <div class="flotaizq" style="padding: 0 25pt;">
+                            <span>Aceptada &nbsp;</span>
+                            <span class="flotader"> <input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                        </div>
+
+                        <div class="flotaizq" style="padding: 0 25pt;">
+                            <span>Rechazada  &nbsp;</span>
+                            <span class="flotader"> <input readonly class="ancho15" type="checkbox" id="chkopcion" name="chkopcion" disabled></span>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="row" style="padding-top: 5pt;">
+                    <div class="col1 colSubtitulo">Cuenta de Usuario Email</div>
+                    <div class="col2y3 alinearizq">
+                        <div class="flotaizq" style="padding: 0 5pt;">
+                            <input class="lineaInf" style="width:180pt;" type="text" id="numero" name="numero"  disabled>
+                        </div>
+
+                        <div class="flotaizq" style="padding: 0 5pt;">
+                            <span>Espacio </span>
+                            <span class="flotader"><input class="lineaInf" style="width:210pt;" type="text" id="numero" name="numero"  disabled></span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row" style="padding-top: 5pt;">
+                    <div class="col1 colSubtitulo">Observaciones</div>
+                    <div class="col2y3 alinearizq">
+                        <div class="flotaizq" style="padding: 0 5pt;">
+                            <input class="lineaInf" style="width:431pt;" type="text" id="numero" name="numero"  disabled>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row" id="bottom-" style="margin-top: 70px!important; margin-left: 300px!important;  text-align: center; margin: auto; width: 50%;">
+                    <div class="firma01">Vo Bo Resp. de Tecnología y Sistemas</div>
+                    <div style="margin-top: 30px!important; margin-left: 120px!important;  text-align: center; margin: auto; width: 50%;">............/................................../...........</div>
+                </div>
+
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

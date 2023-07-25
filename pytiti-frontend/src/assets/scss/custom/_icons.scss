@@ -1,0 +1,27 @@
+.icon-content {
+    i {
+        font-size: 24px;
+        margin-right: 10px;
+        transition: all 0.4s;
+        vertical-align: middle;
+        &.mr-0{
+            margin-right: 0;
+        }
+    }
+
+    svg {
+        margin-right: 10px;
+        transition: all 0.4s;
+        height: 20px;
+    }
+
+    i,svg {
+        &.primary {
+            color: $green;
+        }
+        &.danger {
+            color: $danger;
+        }
+    }
+
+}

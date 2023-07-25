@@ -1,0 +1,129 @@
+.btn-right-text {
+  align-items: center;
+  border: 0 solid #fff;
+  border-radius: 4px;
+  display: inline-flex;
+  padding: 0px 0px;
+  transition: all 0.3s ease;
+  margin-bottom: 10px;
+  &.mb-0 {
+    margin-bottom: 0px;
+  }
+  &.mr-1 {
+    margin-right: 5px;
+  }
+  &.mr-2 {
+    margin-right: 10px;
+  }
+  &.mr-3 {
+    margin-right: 15px;
+  }
+  span {
+    color: #fff;
+    transform: translateX(280px);
+    transition: all 0.3s ease;
+    position: absolute;
+    transform: translateX(4px);
+    opacity: 1;
+    position: relative;
+    height: 100%;
+    padding-top: auto;
+    padding-bottom: auto;
+    min-width: 70px;
+    &.text {
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      display: table-cell;
+      vertical-align: middle;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+  }
+  i {
+    padding-right: 6px;
+    padding-left: 6px;
+    color: #fff;
+    font-size: 24px;
+  }
+  &.primary {
+    background-color: $green;
+    span {
+      &.text{
+        background-color: darken($green, 5%);
+      }
+    }
+  }
+  &.gray {
+    background-color: $gray-600;
+    span {
+      &.text{
+        background-color: darken($gray-600, 5%);
+      }
+    }
+  }
+  &.danger {
+    background-color: $danger;
+    span {
+      &.text{
+        background-color: darken($danger, 5%);
+      }
+    }
+  }
+}
+.container-buttons {
+  min-width: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.btn-icon, .btn-hover {
+  align-items: center;
+  border: 0 solid #fff;
+  border-radius: 4px;
+  display: inline-flex;
+  padding: 0px 0px;
+  transition: all 0.3s ease;
+  margin-bottom: 10px;
+  
+  span {
+    color: #fff;
+    transform: translateX(280px);
+    transition: all 0.3s ease;
+    opacity: 0;
+    position: absolute;
+  }
+  i {
+    padding-right: 4px;
+    padding-left: 4px;
+    color: #fff;
+    font-size: 24px;
+  }
+  &.primary {
+    background-color: $green;
+  }
+  &.danger {
+    background-color: $danger;
+  }
+  &.mr-0{
+    margin-right: 0px;
+  }
+}
+
+.btn-icon {
+  margin-right: 10px;
+}
+
+.btn-hover{
+  &:hover {
+    span {
+      transform: translateX(4px);
+      opacity: 1;
+      position: relative;
+      padding-right: 10px;
+    }
+  }
+}

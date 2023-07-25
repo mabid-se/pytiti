@@ -1,0 +1,19 @@
+.idea
+
+FOLDERS
+node_modules/
+dist/
+
+ENVIRONMENT FILES
+.env
+.env.modules
+.env.production
+.env.development
+
+.vscode
+**/.DS_Store
+
+yarn-error.sublime-project
+yarn-error.sublime-workspace
+
+*.code-workspace

@@ -1,0 +1,16 @@
+.datepicker.success {
+  .flatpickr-months,
+  .flatpickr-weekdays {
+    background-color: $green !important;
+  }
+  .flatpickr-day {
+    &.selected ,&:hover {
+      background-color: $green !important;
+      border-color: $green !important;
+      color: white!important;
+    }
+    &.today {
+        border-color: $green !important;
+    }
+  }
+}

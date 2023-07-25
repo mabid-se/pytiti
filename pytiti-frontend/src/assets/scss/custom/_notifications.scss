@@ -1,0 +1,14 @@
+.vue-notification-group{
+    .vue-notification {
+        background: $blue!important;
+        border-left-color: #0d4fc8!important;
+    }
+    .success{
+        background: $green!important;
+        border-left-color: #077f6e!important;
+    }
+    .error{
+        background: $danger!important;
+        border-left-color: #cc3110!important;
+    }
+}

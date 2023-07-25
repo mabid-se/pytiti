@@ -1,0 +1,22 @@
+.table-responsive {
+  &.nested {
+    width: 95%;
+    margin-left: 5%;
+  }
+}
+
+tbody {
+  &.draggable {
+    pointer-events: none;
+    tr th,
+    tr td {
+      a,
+      button,
+      i {
+        pointer-events: auto;
+        cursor: pointer;
+      }
+    }
+    
+  }
+}

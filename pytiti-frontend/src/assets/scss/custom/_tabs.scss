@@ -1,0 +1,15 @@
+$soft-gray: #f4f3f8;
+
+.nav-tabs {
+  &.custom {
+    background-color: $soft-gray;
+    border-bottom: none;
+    .nav-item {
+      background-color: $soft-gray;
+      .nav-link.active {
+        background-color: white;
+        border-bottom: none;
+      }
+    }
+  }
+}

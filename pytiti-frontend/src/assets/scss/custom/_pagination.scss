@@ -1,0 +1,11 @@
+.pagination.success > li > a,
+.pagination.success > li > span {
+  color: $green;
+}
+.pagination.success > li.active > a {
+  border: 1px solid $green !important;
+}
+
+.pagination.success > li.active > a {
+  background-color: $green !important;
+}

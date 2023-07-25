@@ -1,0 +1,6 @@
+.form-check-input:checked {
+    &.success {
+        background-color: $success;
+        border-color: $success;
+    }
+}
